@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+out/
+data/cases.json
+data/audit.jsonl

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>SignalDesk | Security Advisor Lab</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="mark">S<span class="mark-dot">.</span></span><div><strong>SignalDesk</strong><small>SECURITY ADVISOR LAB</small></div></div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav aria-label="Dashboard navigation"><a class="active" href="#overview">◈ <span>Overview</span></a><a href="#customers">▦ <span>Customers</span></a><a href="#cases">◎ <span>Incident queue</span></a><a href="#findings">◇ <span>Posture findings</span></a></nav>
+      <div class="sidebar-bottom"><div class="status-pulse"></div><div><strong>Lab environment</strong><small>Sample data · No live connection</small></div></div>
+    </aside>
+    <main id="overview">
+      <header class="topbar"><div class="crumb">Workspace <span>/</span> Security overview</div><div class="top-right"><span class="live"><i></i> DEMO DATA</span><span class="avatar" aria-label="Yeabsira Mesfin">YM</span></div></header>
+      <div class="content">
+        <div class="heading"><div><div class="eyebrow">CUSTOMER SECURITY OPERATIONS <span class="rule"></span> 01 / OVERVIEW</div><h1>Security posture <em>at a glance.</em></h1><p>Turn endpoint signals into clear priorities, tracked incidents, and customer guidance.</p></div><div class="asof" id="asof">Loading assessment...</div></div>
+        <section class="metrics" aria-label="Summary metrics" id="metrics"></section>
+        <section class="main-grid" id="customers"><div class="panel"><div class="panel-head"><div><span class="overline">01 / CUSTOMER HEALTH</span><h2>Managed environments</h2></div><span class="hint">Posture check coverage</span></div><div id="customer-list"></div></div><div class="panel queue-panel" id="cases"><div class="panel-head"><div><span class="overline">02 / RESPONSE QUEUE</span><h2>Cases needing attention</h2></div><span class="count-badge" id="case-count">0 OPEN</span></div><div id="case-list"></div></div></section>
+        <section class="panel findings-panel" id="findings"><div class="panel-head"><div><span class="overline">03 / CONFIGURATION DRIFT</span><h2>Remediation priorities</h2></div><label class="filter-label">Customer <select id="customer-filter" aria-label="Filter findings by customer"><option value="all">All customers</option></select></label></div><div class="table-wrap"><table><thead><tr><th>ENDPOINT</th><th>FINDING</th><th>SEVERITY</th><th>GUIDANCE</th><th>FRAMEWORK</th></tr></thead><tbody id="findings-list"></tbody></table></div></section>
+        <footer>Independent portfolio project by Yeabsira Mesfin <span>·</span> Synthetic telemetry only <span>·</span> No vendor integration</footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

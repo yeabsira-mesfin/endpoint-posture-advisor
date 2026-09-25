@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-25T18:00:00Z",
+  "customers": [
+    {"id": "northstar", "name": "Northstar Health", "sla_hours": 4},
+    {"id": "harbor", "name": "Harbor Research", "sla_hours": 8}
+  ],
+  "endpoints": [
+    {"id": "NS-WIN-01", "customer_id": "northstar", "os": "Windows", "criticality": "high", "sensor_installed": true, "sensor_online": true, "prevention_mode": true, "tamper_protection": true, "logging_enabled": true, "last_seen_hours": 0.2},
+    {"id": "NS-LNX-02", "customer_id": "northstar", "os": "Linux", "criticality": "critical", "sensor_installed": true, "sensor_online": false, "prevention_mode": false, "tamper_protection": true, "logging_enabled": false, "last_seen_hours": 30},
+    {"id": "NS-MAC-03", "customer_id": "northstar", "os": "macOS", "criticality": "medium", "sensor_installed": true, "sensor_online": true, "prevention_mode": true, "tamper_protection": false, "logging_enabled": true, "last_seen_hours": 1},
+    {"id": "HB-WIN-01", "customer_id": "harbor", "os": "Windows", "criticality": "high", "sensor_installed": true, "sensor_online": true, "prevention_mode": true, "tamper_protection": true, "logging_enabled": true, "last_seen_hours": 0.1},
+    {"id": "HB-LNX-02", "customer_id": "harbor", "os": "Linux", "criticality": "medium", "sensor_installed": false, "sensor_online": false, "prevention_mode": false, "tamper_protection": false, "logging_enabled": false, "last_seen_hours": 72},
+    {"id": "HB-MAC-03", "customer_id": "harbor", "os": "macOS", "criticality": "low", "sensor_installed": true, "sensor_online": true, "prevention_mode": true, "tamper_protection": true, "logging_enabled": true, "last_seen_hours": 0.5}
+  ],
+  "detections": [
+    {"id": "DET-101", "customer_id": "northstar", "endpoint_id": "NS-WIN-01", "kind": "suspicious_script", "severity": "high", "hours_ago": 2.5, "evidence": "Encoded script execution from an unusual parent process; lab-generated event only."},
+    {"id": "DET-102", "customer_id": "northstar", "endpoint_id": "NS-LNX-02", "kind": "credential_anomaly", "severity": "critical", "hours_ago": 5, "evidence": "Privileged account login from a newly observed source; lab-generated event only."},
+    {"id": "DET-201", "customer_id": "harbor", "endpoint_id": "HB-WIN-01", "kind": "suspicious_script", "severity": "medium", "hours_ago": 1, "evidence": "Script interpreter spawned by a document viewer; lab-generated event only."}
+  ]
+}
