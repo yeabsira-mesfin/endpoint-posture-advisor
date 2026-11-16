@@ -1,0 +1,44 @@
+{
+  "before": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-01T00:00:00Z",
+    "endpoints": [
+      "demo-01"
+    ],
+    "findings": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "logging_enabled",
+        "severity": "high"
+      }
+    ]
+  },
+  "after": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-02T00:00:00Z",
+    "endpoints": [
+      "demo-01"
+    ],
+    "findings": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "logging_enabled",
+        "severity": "medium"
+      }
+    ]
+  },
+  "expected": {
+    "customer_id": "demo",
+    "changes": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "logging_enabled",
+        "state": "changed",
+        "before": "high",
+        "after": "medium"
+      }
+    ]
+  }
+}
