@@ -1,0 +1,36 @@
+{
+  "before": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-01T00:00:00Z",
+    "endpoints": [
+      "demo-01"
+    ],
+    "findings": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "sensor_installed",
+        "severity": "medium"
+      }
+    ]
+  },
+  "after": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-02T00:00:00Z",
+    "endpoints": [],
+    "findings": []
+  },
+  "expected": {
+    "customer_id": "demo",
+    "changes": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "sensor_installed",
+        "state": "retired",
+        "before": "medium",
+        "after": null
+      }
+    ]
+  }
+}
