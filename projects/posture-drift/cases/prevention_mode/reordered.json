@@ -1,0 +1,63 @@
+{
+  "before": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-01T00:00:00Z",
+    "endpoints": [
+      "demo-01",
+      "demo-02"
+    ],
+    "findings": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "prevention_mode",
+        "severity": "high"
+      },
+      {
+        "endpoint_id": "demo-02",
+        "rule": "prevention_mode",
+        "severity": "medium"
+      }
+    ]
+  },
+  "after": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-02T00:00:00Z",
+    "endpoints": [
+      "demo-02",
+      "demo-01"
+    ],
+    "findings": [
+      {
+        "endpoint_id": "demo-02",
+        "rule": "prevention_mode",
+        "severity": "medium"
+      },
+      {
+        "endpoint_id": "demo-01",
+        "rule": "prevention_mode",
+        "severity": "high"
+      }
+    ]
+  },
+  "expected": {
+    "customer_id": "demo",
+    "changes": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "prevention_mode",
+        "state": "persistent",
+        "before": "high",
+        "after": "high"
+      },
+      {
+        "endpoint_id": "demo-02",
+        "rule": "prevention_mode",
+        "state": "persistent",
+        "before": "medium",
+        "after": "medium"
+      }
+    ]
+  }
+}
