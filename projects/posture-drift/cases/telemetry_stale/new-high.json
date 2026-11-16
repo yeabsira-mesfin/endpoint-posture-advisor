@@ -1,0 +1,38 @@
+{
+  "before": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-01T00:00:00Z",
+    "endpoints": [
+      "demo-01"
+    ],
+    "findings": []
+  },
+  "after": {
+    "version": 1,
+    "customer_id": "demo",
+    "captured_at": "2026-01-02T00:00:00Z",
+    "endpoints": [
+      "demo-01"
+    ],
+    "findings": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "telemetry_stale",
+        "severity": "high"
+      }
+    ]
+  },
+  "expected": {
+    "customer_id": "demo",
+    "changes": [
+      {
+        "endpoint_id": "demo-01",
+        "rule": "telemetry_stale",
+        "state": "new",
+        "before": null,
+        "after": "high"
+      }
+    ]
+  }
+}
